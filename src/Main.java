@@ -1,75 +1,85 @@
 public class Main {
     public static void main(String[] args) {
-        // Задача №1
-        System.out.println();
         System.out.println("Задача №1");
-        for (int i = 1; i <= 10; i = i + 1){
-            System.out.println(i);
+        int sum = 0;
+        int month = 0;
+        while (sum < 2_459_000){
+            sum = sum + 15000;
+            month+=1;
         }
+        System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
 
-        // Задача №2
         System.out.println();
         System.out.println("Задача №2");
-        for (int i = 10; i >= 1; i = i - 1){
-            System.out.println(i);
+        int i = 1;
+        for (; i <= 10; i+=1){
+            System.out.print(i + " ");
         }
+        System.out.println();
+        i = 10;
+        while (i >= 1){
+            System.out.print(i + " ");
+            i-=1;
+        }
+        System.out.println();
 
-        // Задача №3
         System.out.println();
         System.out.println("Задача №3");
-        for (int i = 0; i <= 17; i+=2){
-            System.out.println(i);
+        int peopleY = 12_000_000;
+        for (int year = 1; i <= 10; i+=1){
+            peopleY = peopleY + peopleY/1000*(17-8);
+            System.out.println("Год " + year + ", численность населения состовляет " + peopleY);
         }
 
-        // Задача №4
         System.out.println();
         System.out.println("Задача №4");
-        for (int i = 10; i >= -10; i-=1){
-            System.out.println(i);
+        double deposit = 15000;
+        month = 1;
+        while (deposit <= 12_000_000){
+            deposit = deposit + deposit*0.07f + 15000;
+            deposit = Math.round(deposit * 100.0) / 100.0;
+            System.out.println("Месяц " + month + ", сумма накоплений " + deposit + " рублей");
+            month+=1;
         }
 
-        // Задача №5
         System.out.println();
         System.out.println("Задача №5");
-        for (int i = 1904; i <= 2096; i+=4){
-            System.out.println(i + " год является високосным");
+        deposit = 15000;
+        month = 1;
+        while (deposit <= 12_000_000){
+            deposit = deposit + deposit*0.07f + 15000;
+            deposit = Math.round(deposit * 100.0) / 100.0;
+            if (month % 6 == 0)
+                System.out.println("Месяц " + month + ", сумма накоплений " + deposit + " рублей");
+            month+=1;
         }
 
-        // Задача №6
         System.out.println();
         System.out.println("Задача №6");
-        for (int i = 7; i <= 98; i+=7){
-            System.out.println(i);
+        deposit = 15000;
+        for (month = 1; month <= 9*12; month+=1){
+            deposit = deposit + deposit*0.07f + 15000;
+            deposit = Math.round(deposit * 100.0) / 100.0;
+            if (month % 6 == 0)
+                System.out.println("Месяц " + month + ", сумма накоплений " + deposit + " рублей");
         }
 
-        // Задача №7
         System.out.println();
         System.out.println("Задача №7");
-        for (int i = 1; i <=512; i*=2){
-            System.out.println(i);
+        int friday = 2;
+        for (int day = friday; day <= 31; day+=7){
+            System.out.println("Сегодня пятница, " + day + "-у число. Необходимо подготовить отчет");
         }
 
-        // Задача №8
         System.out.println();
         System.out.println("Задача №8");
-        for (int i = 1; i <= 12; i+=1){
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + i*29000 + " рублей");
+        int startYear = 1824;
+        int endYear = 2124;
+        for (int year = startYear; year <= endYear; year+=1){
+            if (year % 79 == 0){
+                System.out.println(year);
+            }
         }
 
-        // Задача №9
-        System.out.println();
-        System.out.println("Задача №9");
-        float sum = 0;
-        for (int i = 1; i <= 12; i+=1){
-            sum = sum*0.01f + sum + 29000;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей");
-        }
-
-        // Задача №10
-        System.out.println();
-        System.out.println("Задача №10");
-        for (int i = 1; i <= 10; i+=1){
-            System.out.println("2*" + i + "=" + i*2);
-        }
     }
 }
