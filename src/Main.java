@@ -6,20 +6,20 @@ public class Main {
         while (sum < 2_459_000){
             sum = sum + 15000;
             month+=1;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
+
 
         System.out.println();
         System.out.println("Задача №2");
         int i = 1;
-        for (; i <= 10; i+=1){
+        while (i <= 10){
             System.out.print(i + " ");
+            i+=1;
         }
         System.out.println();
-        i = 10;
-        while (i >= 1){
+        for (i = 10; i >= 1; i-=1){
             System.out.print(i + " ");
-            i-=1;
         }
         System.out.println();
 
